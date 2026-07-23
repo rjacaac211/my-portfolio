@@ -71,7 +71,7 @@ export function Hero() {
             View Projects
           </a>
         </div>
-        <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 md:justify-start">
+        <div className="mt-6 flex flex-col items-center gap-2 md:items-start">
           {contacts.map((contact) => (
             <a
               key={contact.href}
