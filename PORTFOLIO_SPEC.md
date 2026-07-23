@@ -35,17 +35,16 @@ Subtle only — gentle fade/slide-in on scroll, smooth hover states. No parallax
 
 ## 4. Site Map / Navigation
 
-Single-page scroll site with a sticky nav bar (logo/initials mark "RJA" + anchor links + theme toggle). Section order:
+Single-page scroll site with a sticky nav bar (logo/initials mark "RJA" + anchor links + theme toggle). Section order — Projects moved up right after Hero so recruiters/HR (the primary visitor) reach real proof of work within one scroll, ahead of resume-style sections:
 
 1. Hero
-2. About / Personal Characteristics
-3. Why Hire Me
+2. Projects
+3. About / Personal Characteristics (incl. "Why Hire Me" — merged, see §5.2)
 4. Experience
 5. Skills
 6. Education & Certifications
-7. Projects
-8. Testimonials
-9. Contact / Footer
+7. Testimonials
+8. Contact / Footer
 
 ## 5. Section-by-Section Spec
 
@@ -56,18 +55,18 @@ Single-page scroll site with a sticky nav bar (logo/initials mark "RJA" + anchor
 - Tagline (from resume's professional summary): *"AI Developer / AI Engineer building end-to-end AI agents, automations, and full-stack LLM applications. Proven in transforming complex manual workflows into scalable, production-ready systems that deliver 90%+ time savings."*
 - CTAs: "Download Resume" (links to `/resume.pdf`) and "View Projects" (anchor scroll to Projects section)
 
-### 5.2 About / Personal Characteristics
-Short bio + traits, informed by the resume summary and testimonials: proactive, ownership-driven, business-minded, easy to work with, patient mentor to teammates, comfortable with ambiguity.
+### 5.2 About / Personal Characteristics (incl. Why Hire Me)
+One combined section — short bio + trait pills, followed by a condensed "why hire me" list, in RJ's own words. Merged from two previously separate sections (About, Why Hire Me) since they covered overlapping ground (traits/working style); kept as one section to avoid resume-style filler.
 
-### 5.3 Why Hire Me
-Dedicated standalone section with punchy cards, in RJ's own words:
-- Goes beyond technical implementation to understand the business itself — the *why* and *what*, not just the *how*
-- Takes ownership of business workflows end-to-end when building AI automations
-- Proactive communicator — surfaces blockers early rather than waiting to be asked
-- Comfortable operating with high-level, ambiguous requirements and translating them into clear technical plans
-- Comfortable working with stakeholders at all levels, from engineers to executives
+- Bio + traits: proactive, ownership-driven, business-minded, easy to work with, patient mentor to teammates, comfortable with ambiguity.
+- Why hire me (condensed list, not full cards):
+  - Goes beyond technical implementation to understand the business itself — the *why* and *what*, not just the *how*
+  - Takes ownership of business workflows end-to-end when building AI automations
+  - Proactive communicator — surfaces blockers early rather than waiting to be asked
+  - Comfortable operating with high-level, ambiguous requirements and translating them into clear technical plans
+  - Comfortable working with stakeholders at all levels, from engineers to executives
 
-### 5.4 Experience
+### 5.3 Experience
 Vertical timeline, most-recent-first:
 
 **AI Developer** — CD Commerce GmbH (Remote, Full-time) — 04/2025 – 12/2025
@@ -85,7 +84,7 @@ Vertical timeline, most-recent-first:
 - Collaborated with a diverse team around the world on an innovative project to develop an AI-powered traffic management system, leveraging computer vision to improve traffic flow and reduce congestion in Nigerian cities.
 - Led the development of a YOLO-based vehicle detection and counting model, overseeing dataset preparation to model training with Python, Roboflow, and Google Colab, supporting accurate vehicle detection and counting.
 
-### 5.5 Skills
+### 5.4 Skills
 Grouped pill/tag clusters by category:
 
 - **Languages:** Python, JavaScript, TypeScript
@@ -94,7 +93,7 @@ Grouped pill/tag clusters by category:
 - **Frontend:** React
 - **Data / Infra:** PostgreSQL, Docker, CI/CD, Git, AWS
 
-### 5.6 Education & Certifications
+### 5.5 Education & Certifications
 **Education:**
 - Bachelor of Science in Computer Science — La Salle University, Ozamiz City, Misamis Occidental, PH (2021 – 2026)
 
@@ -107,25 +106,34 @@ Grouped pill/tag clusters by category:
 - GitHub Foundations (GitHub)
 - IT Passport (IP) (PhilNITS)
 
-### 5.7 Projects
-Curated cards. Each card: title, description, tech-stack tags, GitHub repo link, live demo link (if available), screenshot/preview image.
+### 5.6 Projects
+Uniform grid, 4 cards, equal weight (no single "featured" card — chosen so recruiters scan all four rather than anchoring on one). Each card: screenshot, title, subtitle, ~2-sentence description, tech-stack tags, GitHub repo link (none currently have a separately hosted live demo).
 
-**1. NutriGuide AI: AI-Powered Personalized Nutrition Assistant Web App** (03/2026 – Present) — *real content*
-- Description: Built a LangGraph AI agent system with intent classification, multi-step reasoning, and RAG for nutrition-specific, grounded recommendations; integrated USDA FoodData Central (FDC) API for food search, nutrition data, and calorie tracking. Implemented stateful conversations and tools to integrate user profiles, food logs, and TDEE for tailored dietary advice. Deployed full-stack app (React, Node.js/Express, PostgreSQL, Docker) with GitHub Actions CI/CD to AWS EC2 and ECR.
-- Tech tags: React, Node.js, Express, PostgreSQL, Docker, LangGraph, RAG, GitHub Actions CI/CD, AWS (EC2, ECR)
+**1. NutriGuide AI** — AI-powered personalized nutrition assistant
+- Description: A LangGraph agent you talk to: log meals in plain English, ask nutrition questions grounded in a curated RAG knowledge base, and track calories/weight against a TDEE-based goal — streamed token-by-token to a React dashboard.
+- Tech tags: React, Node.js, Express, PostgreSQL, LangGraph, RAG, Docker, AWS
 - Repo: https://github.com/rjacaac211/nutriguide-ai
-- Live demo: *TBD — not yet available*
-- Screenshot: *TBD — not yet available*
+- Screenshot: `/public/images/projects/nutriguide-ai.png`
 
-**2-5. `[PLACEHOLDER PROJECT]`** — *to be filled in later, 2-4 more cards to reach the target of 3-6 total*
-- Title: `TBD`
-- Description: `TBD`
-- Tech tags: `TBD`
-- Repo link: `TBD`
-- Live demo link: `TBD`
-- Screenshot: `TBD`
+**2. LeadFlow AI** — Autonomous B2B lead-qualification agent
+- Description: A LangGraph.js agent that scores and tiers inbound leads against a configurable ICP rubric, syncs to HubSpot, drafts outreach, and pauses on a durable human-in-the-loop approval gate before anything sends.
+- Tech tags: TypeScript, LangGraph.js, Express, Prisma, PostgreSQL, React, Claude
+- Repo: https://github.com/rjacaac211/leadflow-ai
+- Screenshot: `/public/images/projects/leadflow-ai.png` (frame extracted from the repo's demo GIF, showing the scored lead + outreach-approval UI)
 
-### 5.8 Testimonials
+**3. Sign Sense** — Real-time mobile traffic sign recognition
+- Description: An Android app that detects and classifies Philippine traffic signs in real time using YOLOv10 and a CNN, optimized with TensorFlow Lite. Published research: 0.823 mAP detection, 99.66% classification accuracy.
+- Tech tags: YOLOv10, TensorFlow Lite, CNN, Kotlin, Android, Roboflow
+- Repo: https://github.com/rjacaac211/Mobile-App-Traffic-Sign-Recognition
+- Screenshot: `/public/images/projects/sign-sense.jpg`
+
+**4. Dental Care** — AI-powered oral health assistant
+- Description: A dental clinic assistant combining a LangChain ReAct agent (SQL + web search tools), voice input via Deepgram, and a MobileNetV2 model for oral-disease image classification, with persisted multi-turn chat history.
+- Tech tags: FastAPI, React, LangChain, MongoDB Atlas, Deepgram, MobileNetV2, Docker
+- Repo: https://github.com/rjacaac211/Dental-Care
+- Screenshot: `/public/images/projects/dental-care.jpg`
+
+### 5.7 Testimonials
 Three LinkedIn recommendations, verbatim:
 
 > "RJ was our first AI developer, joining as an intern straight out of university. He built our first scrapers and automation workflows, giving us an early foothold in AI and automation. Thanks for your contributions, RJ — all the best going forward."
@@ -145,7 +153,7 @@ Three LinkedIn recommendations, verbatim:
 > I'd recommend RJ without hesitation to any team who is looking for an AI Developer who brings both a technical and scalable mindset to the table."
 > **— Drixcy Guiang, HR Manager**
 
-### 5.9 Contact / Footer
+### 5.8 Contact / Footer
 - Email: rj.acaac211@gmail.com
 - Phone: +63 920-700-5579
 - LinkedIn: https://www.linkedin.com/in/rj-aca-ac-7a070b29a/
@@ -168,14 +176,16 @@ Three LinkedIn recommendations, verbatim:
 |---|---|---|---|
 | Headshot | `uploads/headshot.jpg` | `/public/images/headshot.jpg` | Ready |
 | Resume PDF | `uploads/resume.pdf` | `/public/resume.pdf` | Ready |
-| NutriGuide AI screenshot | — | `/public/images/projects/nutriguide-ai.png` | TBD |
+| NutriGuide AI screenshot | `../nutriguide-ai/docs/media/dashboard.png` | `/public/images/projects/nutriguide-ai.png` | Ready |
+| LeadFlow AI screenshot | frame extracted from `../leadflow-ai/docs/demo.gif` | `/public/images/projects/leadflow-ai.png` | Ready |
+| Sign Sense screenshot | `../Mobile-App-Traffic-Sign-Recognition/github/assets/Mobile-App-Screenshot-1.jpg` | `/public/images/projects/sign-sense.jpg` | Ready |
+| Dental Care screenshot | `../Dental-Care/docs/dental-care-cover.jpg` | `/public/images/projects/dental-care.jpg` | Ready |
 | Open Graph preview image | — | `/public/og-image.png` | TBD |
-| Placeholder project screenshots (x2-4) | — | `/public/images/projects/` | TBD |
 
 ## 8. Open Items / TODO Before Launch
 
 - [ ] Decide on a custom domain (currently using Vercel default URL)
-- [ ] Fill in 2-4 additional real project cards (title, description, tech tags, links, screenshot)
-- [ ] Get a live demo link and screenshot for NutriGuide AI, or confirm it stays repo-only
+- [x] Fill in 2-4 additional real project cards (title, description, tech tags, links, screenshot) — added LeadFlow AI, Sign Sense, Dental Care alongside NutriGuide AI
+- [x] Get a screenshot for NutriGuide AI — added; confirmed it stays repo-only (no separately hosted live demo for any of the 4 projects)
 - [ ] Design and add an Open Graph preview image
 - [ ] Confirm final copy for the About/Personal Characteristics bio (currently a synthesis of resume + testimonials, not RJ's own words yet)

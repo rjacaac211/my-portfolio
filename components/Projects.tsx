@@ -1,27 +1,47 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const projects = [
   {
     title: "NutriGuide AI",
-    subtitle: "AI-Powered Personalized Nutrition Assistant Web App",
-    dates: "03/2026 – Present",
+    subtitle: "AI-powered personalized nutrition assistant",
+    image: "/images/projects/nutriguide-ai.png",
     description:
-      "A LangGraph AI agent system with intent classification, multi-step reasoning, and RAG for nutrition-specific, grounded recommendations. Integrates the USDA FoodData Central (FDC) API for food search, nutrition data, and calorie tracking, with stateful conversations that combine user profiles, food logs, and TDEE for tailored dietary advice.",
-    tags: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "LangGraph", "RAG", "AWS"],
+      "A LangGraph agent you talk to: log meals in plain English, ask nutrition questions grounded in a curated RAG knowledge base, and track calories/weight against a TDEE-based goal — streamed token-by-token to a React dashboard.",
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "LangGraph", "RAG", "Docker", "AWS"],
     repo: "https://github.com/rjacaac211/nutriguide-ai",
     demo: null,
-    placeholder: false,
   },
   {
-    title: "More projects coming soon",
-    subtitle: "",
-    dates: "",
-    description: "Additional case studies are on the way — check back soon.",
-    tags: [],
-    repo: null,
+    title: "LeadFlow AI",
+    subtitle: "Autonomous B2B lead-qualification agent",
+    image: "/images/projects/leadflow-ai.png",
+    description:
+      "A LangGraph.js agent that scores and tiers inbound leads against a configurable ICP rubric, syncs to HubSpot, drafts outreach, and pauses on a durable human-in-the-loop approval gate before anything sends.",
+    tags: ["TypeScript", "LangGraph.js", "Express", "Prisma", "PostgreSQL", "React", "Claude"],
+    repo: "https://github.com/rjacaac211/leadflow-ai",
     demo: null,
-    placeholder: true,
+  },
+  {
+    title: "Sign Sense",
+    subtitle: "Real-time mobile traffic sign recognition",
+    image: "/images/projects/sign-sense.jpg",
+    description:
+      "An Android app that detects and classifies Philippine traffic signs in real time using YOLOv10 and a CNN, optimized with TensorFlow Lite. Published research: 0.823 mAP detection, 99.66% classification accuracy.",
+    tags: ["YOLOv10", "TensorFlow Lite", "CNN", "Kotlin", "Android", "Roboflow"],
+    repo: "https://github.com/rjacaac211/Mobile-App-Traffic-Sign-Recognition",
+    demo: null,
+  },
+  {
+    title: "Dental Care",
+    subtitle: "AI-powered oral health assistant",
+    image: "/images/projects/dental-care.jpg",
+    description:
+      "A dental clinic assistant combining a LangChain ReAct agent (SQL + web search tools), voice input via Deepgram, and a MobileNetV2 model for oral-disease image classification, with persisted multi-turn chat history.",
+    tags: ["FastAPI", "React", "LangChain", "MongoDB Atlas", "Deepgram", "MobileNetV2", "Docker"],
+    repo: "https://github.com/rjacaac211/Dental-Care",
+    demo: null,
   },
 ];
 
@@ -35,28 +55,26 @@ export function Projects() {
             {projects.map((project) => (
               <div
                 key={project.title}
-                className={`flex flex-col rounded-2xl border p-6 ${
-                  project.placeholder
-                    ? "border-dashed border-zinc-300 text-center dark:border-zinc-700"
-                    : "border-zinc-200 bg-white dark:border-zinc-800 dark:bg-[#0B0F19]"
-                }`}
+                className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-[#0B0F19]"
               >
-                <div className="flex-1">
-                  {project.dates && (
-                    <p className="font-mono text-xs text-accent dark:text-accent-dark">
-                      {project.dates}
-                    </p>
-                  )}
-                  <h3 className="mt-1 text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-                    {project.title}
-                  </h3>
-                  {project.subtitle && (
+                <div className="relative aspect-video w-full bg-zinc-100 dark:bg-zinc-900">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+                      {project.title}
+                    </h3>
                     <p className="text-sm text-zinc-500 dark:text-zinc-400">{project.subtitle}</p>
-                  )}
-                  <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-                    {project.description}
-                  </p>
-                  {project.tags.length > 0 && (
+                    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                      {project.description}
+                    </p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
@@ -67,20 +85,16 @@ export function Projects() {
                         </span>
                       ))}
                     </div>
-                  )}
-                </div>
-                {(project.repo || project.demo) && (
+                  </div>
                   <div className="mt-5 flex gap-4 text-sm font-medium">
-                    {project.repo && (
-                      <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-accent hover:underline dark:text-accent-dark"
-                      >
-                        GitHub &rarr;
-                      </a>
-                    )}
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-accent hover:underline dark:text-accent-dark"
+                    >
+                      GitHub &rarr;
+                    </a>
                     {project.demo && (
                       <a
                         href={project.demo}
@@ -92,7 +106,7 @@ export function Projects() {
                       </a>
                     )}
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>

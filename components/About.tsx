@@ -9,6 +9,14 @@ const traits = [
   "Patient mentor",
 ];
 
+const reasons = [
+  "Goes beyond the code to understand the business problem underneath it",
+  "Takes ownership of workflows end-to-end, not just the code shipped",
+  "Surfaces blockers and risks early, rather than waiting to be asked",
+  "Turns ambiguous, high-level asks into clear technical plans",
+  "Communicates well from fellow engineers to executive stakeholders",
+];
+
 export function About() {
   return (
     <section id="about" className="mx-auto max-w-5xl px-6 py-16">
@@ -33,6 +41,17 @@ export function About() {
             </span>
           ))}
         </div>
+        <ul className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-2">
+          {reasons.map((reason) => (
+            <li
+              key={reason}
+              className="flex gap-2.5 rounded-xl bg-zinc-50 px-4 py-3 text-sm text-zinc-600 ring-1 ring-zinc-200 dark:bg-zinc-900/40 dark:text-zinc-400 dark:ring-zinc-800"
+            >
+              <span className="mt-0.5 text-accent dark:text-accent-dark">&#10003;</span>
+              {reason}
+            </li>
+          ))}
+        </ul>
       </Reveal>
     </section>
   );
