@@ -9,7 +9,7 @@ const projects = [
     image: "/images/projects/nutriguide-ai.png",
     description:
       "A LangGraph agent you talk to: log meals in plain English, ask nutrition questions grounded in a curated RAG knowledge base, and track calories/weight against a TDEE-based goal — streamed token-by-token to a React dashboard.",
-    tags: ["React", "Node.js", "Express", "PostgreSQL", "LangGraph", "RAG", "Docker", "AWS"],
+    tags: ["LangGraph", "RAG", "OpenAI", "React", "Node.js", "Express", "TypeScript", "JavaScript", "PostgreSQL", "Prisma", "Docker", "AWS"],
     repo: "https://github.com/rjacaac211/nutriguide-ai",
     demo: null,
   },
@@ -19,7 +19,7 @@ const projects = [
     image: "/images/projects/leadflow-ai.png",
     description:
       "A LangGraph.js agent that scores and tiers inbound leads against a configurable ICP rubric, syncs to HubSpot, drafts outreach, and pauses on a durable human-in-the-loop approval gate before anything sends.",
-    tags: ["TypeScript", "LangGraph.js", "Express", "Prisma", "PostgreSQL", "React", "Claude"],
+    tags: ["Claude", "Anthropic", "LangGraph", "n8n", "React", "TypeScript", "JavaScript", "Express", "Prisma", "PostgreSQL", "Docker"],
     repo: "https://github.com/rjacaac211/leadflow-ai",
     demo: null,
   },
@@ -29,7 +29,7 @@ const projects = [
     image: "/images/projects/sign-sense.jpg",
     description:
       "An Android app that detects and classifies Philippine traffic signs in real time using YOLOv10 and a CNN, optimized with TensorFlow Lite. Published research: 0.823 mAP detection, 99.66% classification accuracy.",
-    tags: ["YOLOv10", "TensorFlow Lite", "CNN", "Kotlin", "Android", "Roboflow"],
+    tags: ["Python", "TensorFlow", "YOLO", "CNN", "Kotlin", "Android", "Roboflow"],
     repo: "https://github.com/rjacaac211/Mobile-App-Traffic-Sign-Recognition",
     demo: null,
   },
@@ -39,7 +39,7 @@ const projects = [
     image: "/images/projects/dental-care.jpg",
     description:
       "A dental clinic assistant combining a LangChain ReAct agent (SQL + web search tools), voice input via Deepgram, and a MobileNetV2 model for oral-disease image classification, with persisted multi-turn chat history.",
-    tags: ["FastAPI", "React", "LangChain", "MongoDB Atlas", "Deepgram", "MobileNetV2", "Docker"],
+    tags: ["Python", "TensorFlow", "OpenAI", "LangChain", "FastAPI", "React", "MongoDB", "PostgreSQL", "Docker", "Deepgram", "MobileNetV2"],
     repo: "https://github.com/rjacaac211/Dental-Care",
     demo: null,
   },
