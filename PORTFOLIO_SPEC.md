@@ -110,7 +110,7 @@ Grouped pill/tag clusters by category:
 Uniform grid, 5 cards, equal weight (no single "featured" card — chosen so recruiters scan all of them rather than anchoring on one). AccrueBoard leads as the newest project. Each card: screenshot, title, subtitle, ~2-sentence description, tech-stack tags, GitHub repo link (none currently have a separately hosted live demo).
 
 **1. AccrueBoard** — Bookkeeping AI pipeline with a live human-in-the-loop board
-- Description: A bookkeeping pipeline that classifies, extracts, codes and risk-scores incoming invoices and receipts, then either auto-posts them to a double-entry ledger or routes them to a live review board where a LangGraph assistant investigates and cites its evidence. On 307 held-out documents it posted 79% without a person, with 0 wrong auto-posts.
+- Description: A bookkeeping pipeline that classifies, extracts, codes and risk-scores incoming invoices and receipts, then either auto-posts them to a double-entry ledger or routes them to a live review board where a LangGraph assistant investigates and cites its evidence. On 307 held-out synthetic documents it posted 79% without a person, with 0 wrong auto-posts.
 - Tech tags: Claude, LangGraph, Python, FastAPI, PostgreSQL, pgvector, React, TypeScript, SSE, Docker
 - Repo: https://github.com/rjacaac211/accrue-board
 - Screenshot: `/public/images/projects/accrue-board.png` (live board view from the repo's `docs/images/board.png`)
