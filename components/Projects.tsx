@@ -4,6 +4,16 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 const projects = [
   {
+    title: "AccrueBoard",
+    subtitle: "Bookkeeping AI pipeline with a live human-in-the-loop board",
+    image: "/images/projects/accrue-board.png",
+    description:
+      "A bookkeeping pipeline that classifies, extracts, codes and risk-scores incoming invoices and receipts, then either auto-posts them to a double-entry ledger or routes them to a live review board where a LangGraph assistant investigates and cites its evidence. On 307 held-out documents it posted 79% without a person, with 0 wrong auto-posts.",
+    tags: ["Claude", "Anthropic", "LangGraph", "Python", "FastAPI", "PostgreSQL", "pgvector", "SQLAlchemy", "scikit-learn", "React", "TypeScript", "SSE", "Docker"],
+    repo: "https://github.com/rjacaac211/accrue-board",
+    demo: null,
+  },
+  {
     title: "NutriGuide AI",
     subtitle: "AI-powered personalized nutrition assistant",
     image: "/images/projects/nutriguide-ai.png",

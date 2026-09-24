@@ -107,27 +107,33 @@ Grouped pill/tag clusters by category:
 - IT Passport (IP) (PhilNITS)
 
 ### 5.6 Projects
-Uniform grid, 4 cards, equal weight (no single "featured" card — chosen so recruiters scan all four rather than anchoring on one). Each card: screenshot, title, subtitle, ~2-sentence description, tech-stack tags, GitHub repo link (none currently have a separately hosted live demo).
+Uniform grid, 5 cards, equal weight (no single "featured" card — chosen so recruiters scan all of them rather than anchoring on one). AccrueBoard leads as the newest project. Each card: screenshot, title, subtitle, ~2-sentence description, tech-stack tags, GitHub repo link (none currently have a separately hosted live demo).
 
-**1. NutriGuide AI** — AI-powered personalized nutrition assistant
+**1. AccrueBoard** — Bookkeeping AI pipeline with a live human-in-the-loop board
+- Description: A bookkeeping pipeline that classifies, extracts, codes and risk-scores incoming invoices and receipts, then either auto-posts them to a double-entry ledger or routes them to a live review board where a LangGraph assistant investigates and cites its evidence. On 307 held-out documents it posted 79% without a person, with 0 wrong auto-posts.
+- Tech tags: Claude, LangGraph, Python, FastAPI, PostgreSQL, pgvector, React, TypeScript, SSE, Docker
+- Repo: https://github.com/rjacaac211/accrue-board
+- Screenshot: `/public/images/projects/accrue-board.png` (live board view from the repo's `docs/images/board.png`)
+
+**2. NutriGuide AI** — AI-powered personalized nutrition assistant
 - Description: A LangGraph agent you talk to: log meals in plain English, ask nutrition questions grounded in a curated RAG knowledge base, and track calories/weight against a TDEE-based goal — streamed token-by-token to a React dashboard.
 - Tech tags: React, Node.js, Express, PostgreSQL, LangGraph, RAG, Docker, AWS
 - Repo: https://github.com/rjacaac211/nutriguide-ai
 - Screenshot: `/public/images/projects/nutriguide-ai.png`
 
-**2. LeadFlow AI** — Autonomous B2B lead-qualification agent
+**3. LeadFlow AI** — Autonomous B2B lead-qualification agent
 - Description: A LangGraph.js agent that scores and tiers inbound leads against a configurable ICP rubric, syncs to HubSpot, drafts outreach, and pauses on a durable human-in-the-loop approval gate before anything sends.
 - Tech tags: TypeScript, LangGraph.js, Express, Prisma, PostgreSQL, React, Claude
 - Repo: https://github.com/rjacaac211/leadflow-ai
 - Screenshot: `/public/images/projects/leadflow-ai.png` (frame extracted from the repo's demo GIF, showing the scored lead + outreach-approval UI)
 
-**3. Sign Sense** — Real-time mobile traffic sign recognition
+**4. Sign Sense** — Real-time mobile traffic sign recognition
 - Description: An Android app that detects and classifies Philippine traffic signs in real time using YOLOv10 and a CNN, optimized with TensorFlow Lite. Published research: 0.823 mAP detection, 99.66% classification accuracy.
 - Tech tags: YOLOv10, TensorFlow Lite, CNN, Kotlin, Android, Roboflow
 - Repo: https://github.com/rjacaac211/Mobile-App-Traffic-Sign-Recognition
 - Screenshot: `/public/images/projects/sign-sense.jpg`
 
-**4. Dental Care** — AI-powered oral health assistant
+**5. Dental Care** — AI-powered oral health assistant
 - Description: A dental clinic assistant combining a LangChain ReAct agent (SQL + web search tools), voice input via Deepgram, and a MobileNetV2 model for oral-disease image classification, with persisted multi-turn chat history.
 - Tech tags: FastAPI, React, LangChain, MongoDB Atlas, Deepgram, MobileNetV2, Docker
 - Repo: https://github.com/rjacaac211/Dental-Care
@@ -176,6 +182,7 @@ Three LinkedIn recommendations, verbatim:
 |---|---|---|---|
 | Headshot | `uploads/headshot.jpg` | `/public/images/headshot.jpg` | Ready |
 | Resume PDF | `uploads/resume.pdf` | `/public/resume.pdf` | Ready |
+| AccrueBoard screenshot | `docs/images/board.png` from the GitHub repo | `/public/images/projects/accrue-board.png` | Ready |
 | NutriGuide AI screenshot | `../nutriguide-ai/docs/media/dashboard.png` | `/public/images/projects/nutriguide-ai.png` | Ready |
 | LeadFlow AI screenshot | frame extracted from `../leadflow-ai/docs/demo.gif` | `/public/images/projects/leadflow-ai.png` | Ready |
 | Sign Sense screenshot | `../Mobile-App-Traffic-Sign-Recognition/github/assets/Mobile-App-Screenshot-1.jpg` | `/public/images/projects/sign-sense.jpg` | Ready |
